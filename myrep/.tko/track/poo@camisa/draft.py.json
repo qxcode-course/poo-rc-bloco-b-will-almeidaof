@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-16_23-22-05",
+            "content": "@@ -174,101 +174,61 @@\n     \n-tamanhos_validos \n+if valor !\n = \n-%5B\n %22PP%22\n-,\n+ or\n  %22P%22\n-,\n+ or\n  %22M%22\n-,\n+ or\n  %22G%22\n-,\n+ or\n  %22GG%22\n-,\n+ or\n  %22XG%22\n-%5D%0A        if valor not in tamanhos_validos\n :%0A  \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-10-16_23-26-23",
+            "content": "@@ -440,24 +440,25 @@\n te o seu tam\n+n\n anho de roup\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-10-16_23-27-32",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__size: str = \"\"\n\n    def get_camisa(self):\n        return self.__size\n\n    def set_camisa(self, valor: str) -> None:\n        tamanhos_validos = [\"PP\", \"P\", \"M\", \"G\", \"GG\", \"XG\"]\n        if valor not in tamanhos_validos:\n            print(\"fail: Tamanho inv\u00e1lido\")\n            return\n        self.__size = valor\n\ncamisa: Camisa = Camisa()\n\nwhile camisa.get_camisa() == \"\":\n    print(\"Digite o seu tamanho de roupa\")\n    tamanho = input()\n    camisa.set_camisa(tamanho)\n\nprint(\"Parabens, voc\u00ea comprou uma roupa tamanho\", camisa.get_camisa())",
+            "lines": "22"
+        }
+    ]
+}

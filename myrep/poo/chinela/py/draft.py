@@ -18,4 +18,5 @@ while chinela.Get_Size() == 0:
     tamanho = int(input())
     chinela.Set_Size(tamanho)
 
+
 print("Parabens, você comprou uma chinela tamanho", chinela.Get_Size())

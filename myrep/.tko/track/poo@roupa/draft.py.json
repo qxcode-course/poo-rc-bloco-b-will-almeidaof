@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-16_23-35-15",
+            "content": "@@ -294,13 +294,15 @@\n il: \n-Valor\n+Tamanho\n  inv\n@@ -310,37 +310,8 @@\n lido\n-, tente PP, P, M, G, GG ou XG\n %22)%0A \n@@ -506,17 +506,16 @@\n .split(%22\n- \n %22)%0A     \n@@ -556,34 +556,32 @@\n   break%0A        \n-el\n if args%5B0%5D == %22s\n@@ -602,24 +602,8 @@\n     \n-print(f%22size: (%7B\n cami\n@@ -621,12 +621,8 @@\n sa()\n-%7D)%22)\n %0A   \n@@ -630,128 +630,15 @@\n     \n-elif args%5B0%5D == %22size%22:%0A            tamanho: str = input()%0A            camisa.set_camisa(tamanho)%0A        %0A        %0Amain()%0A%0A\n+%0A    %0A%0A    \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-16_23-44-02",
+            "content": "@@ -716,17 +716,42 @@\n     \n-args%5B1%5D =\n+tamanho: str = input()%0A           \n  cam\n@@ -769,15 +769,15 @@\n isa(\n-args%5B1%5D\n+tamanho\n )%0A  \n",
+            "lines": "32"
+        },
+        {
+            "label": "2025-10-16_23-51-12",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__size: str = \"\"\n\n    def get_camisa(self):\n        return self.__size\n\n    def set_camisa(self, valor: str) -> None:\n        tamanhos_validos = [\"PP\", \"P\", \"M\", \"G\", \"GG\", \"XG\"]\n        if valor not in tamanhos_validos:\n            print(\"fail: Valor inv\u00e1lido, tente PP, P, M, G, GG ou XG\")\n            return\n        self.__size = valor\n\n\ndef main():\n    camisa: Camisa = Camisa()\n    while True:\n        line: str = input()\n        print(\"$\"+line)\n        args: list[str] = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(f\"size: ({camisa.get_camisa()})\")\n        elif args[0] == \"size\":\n            args[1] = camisa.set_camisa(args[1])\n        \n        \nmain()\n\n",
+            "lines": "31"
+        }
+    ]
+}
