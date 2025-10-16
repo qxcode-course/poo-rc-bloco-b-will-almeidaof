@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-16_22-32-54",
+            "content": "@@ -1,541 +0,0 @@\n-class Chinela:%0A    def __init__(self):%0A        self.__size = 0%0A%0A    def Get_Size(self) -%3E int:%0A        return self.__size%0A%0A    def Set_Size(self, valor: int):%0A        if (valor %3C 20 or valor %3E 50) and valor %252 != 0:%0A            print(%22fail: tamanho inv%C3%A1lido%22)%0A            return%0A        self.__size = valor%0A%0Achinela: Chinela = Chinela()%0A%0Awhile chinela.Get_Size == 0:%0A    print(%22DIGITE O TAMANHO DE SUA CHINELA%22)%0A    tamanho = int(input())%0A    chinela.Set_Size(tamanho)%0A%0Aprint(%22Parabens, voc%C3%AA comprou uma chinela tamanho%22, chinela.Get_Size())\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-10-16_22-51-26",
+            "content": "@@ -163,16 +163,17 @@\n      if \n+(\n valor %3C \n@@ -188,16 +188,17 @@\n lor %3E 50\n+)\n  and val\n@@ -353,18 +353,16 @@\n Get_Size\n-()\n  == 0:%0A \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-10-16_23-01-21",
+            "content": "class Chinela:\n    def __init__(self):\n        self.__size = 0\n\n    def Get_Size(self) -> int:\n        return self.__size\n\n    def Set_Size(self, valor: int):\n        if valor < 20 or valor > 50 and valor %2 != 0:\n            print(\"fail: tamanho inv\u00e1lido\")\n            return\n        self.__size = valor\n\nchinela: Chinela = Chinela()\n\nwhile chinela.Get_Size() == 0:\n    print(\"DIGITE O TAMANHO DE SUA CHINELA\")\n    tamanho = int(input())\n    chinela.Set_Size(tamanho)\n\nprint(\"Parabens, voc\u00ea comprou uma chinela tamanho\", chinela.Get_Size())",
+            "lines": "21"
+        }
+    ]
+}
