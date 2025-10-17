@@ -17,7 +17,6 @@ class Relogio:
     def set_hora(self, hora: int):
         if hora < 0 or hora > 23:
             print("fail: hora invalida")
-            
             return
         self.__hora = hora
 
@@ -35,7 +34,7 @@ class Relogio:
 
     def cont_hora(self, hora: int):
         if hora < 0 or hora > 23:
-            print("fail: hora invalida")     
+            print("fail: hora invalida")
             self.__hora = 0   
             return
         self.__hora = hora
