@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-16_23-58-03",
+            "content": "@@ -1,417 +0,0 @@\n-class Relogio:%0A    def __init__(self):%0A        self.__hora = 0%0A        self.__mins = 0%0A        self.__segs = 0%0A    %0A    def get_hora(self):%0A        return self.__hora%0A    def get_mins(self):%0A        return self.__mins%0A    def get_segs(self):%0A        return self.__segs%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7Bself.__hora:.2%7D:%7Bself.__mins:.2%7D:%7Bself.__segs:.2%7D%22%0A    %0Arelogio: Relogio = Relogio()%0Aprint(relogio)\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-10-17_00-12-13",
+            "content": "@@ -320,1524 +320,98 @@\n elf.\n-get\n+_\n _hora\n-():02%7D:%7Bself.get_mins():02%7D:%7Bself.get_segs():02%7D%22%0A    %0A    def set_hora(self, hora: int):%0A        if hora %3C 0 or hora %3E 23:%0A            print(%22fail: hora invalida%22)%0A            return%0A        self.__hora = hora%0A%0A    def set_mins(self, mins: int):%0A        if mins %3C 0 or mins %3E 59:%0A            print(%22fail: minuto invalido%22)%0A            return%0A        self.__mins = mins%0A    %0A    def set_segs(self, segs: int):%0A        if segs %3C 0 or segs %3E 59:%0A            print(%22fail: segundo invalido%22)%0A            return%0A        self.__segs = segs%0A%0A    def NextSecond(self):%0A        if self.get_segs() == 59:%0A            self.set_segs(0)%0A            if self.get_mins() == 59:%0A                self.set_mins(0)%0A                if self.get_hora() == 23:%0A                    self.set_hora(0)%0A                else:%0A                    self.set_hora(self.get_hora() + 1)%0A            else:%0A                self.set_mins(self.get_mins() + 1)%0A        else:%0A            self.set_segs(self.get_segs() + 1)%0A        %0Adef main():%0A    relogio: Relogio = Relogio()%0A    while True:%0A        line: str = input()%0A        print(%22$%22+ line)%0A        args: list%5Bstr%5D = line.split(%22 %22)%0A        if args%5B0%5D == %22end%22:%0A            break%0A        if args%5B0%5D == %22show%22:%0A            print(relogio)%0A        if args%5B0%5D == %22set%22:%0A            args%5B1%5D = relogio.set_hora(int(args%5B1%5D))%0A            args%5B2%5D = relogio.set_mins(int(args%5B2%5D))%0A            args%5B3%5D = relogio.set_segs(int(args%5B3%5D))%0A        if args%5B0%5D == %22next%22:%0A            relogio.NextSecond()%0A    %0Amain(\n+:.2%7D:%7Bself.__mins:.2%7D:%7Bself.__segs:.2%7D%22%0A    %0Arelogio: Relogio = Relogio()%0Aprint(relogio\n )\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-10-17_02-00-45",
+            "content": "@@ -1597,19 +1597,18 @@\n %5B0%5D == %22\n-ini\n+se\n t%22:%0A    \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-10-17_02-01-13",
+            "content": "@@ -1606,17 +1606,8 @@\n nit%22\n- or %22set%22\n :%0A  \n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-10-17_02-01-34",
+            "content": "@@ -1601,199 +1601,20 @@\n == %22\n-set%22:%0A            args%5B1%5D = relogio.set_hora(int(args%5B1%5D))%0A            args%5B2%5D = relogio.set_mins(int(args%5B2%5D))%0A            args%5B3%5D = relogio.set_segs(int(args%5B3%5D))%0A        if args%5B0%5D == %22ini\n+init%22 or %22se\n t%22:%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-10-17_02-04-59",
+            "content": "@@ -493,36 +493,8 @@\n a%22)%0A\n-            self.__hora = 0%0A\n     \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-10-17_02-06-40",
+            "content": "@@ -497,24 +497,39 @@\n             \n+self.__hora = 0\n %0A           \n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-17_02-07-27",
+            "content": "@@ -876,591 +876,8 @@\n gs%0A%0A\n-    def cont_hora(self, hora: int):%0A        if hora %3C 0 or hora %3E 23:%0A            print(%22fail: hora invalida%22)     %0A            self.__hora = 0   %0A            return%0A        self.__hora = hora%0A%0A    def cont_mins(self, mins: int):%0A        if mins %3C 0 or mins %3E 59:%0A            print(%22fail: minuto invalido%22)%0A            self.__mins = 0%0A            return%0A        self.__mins = mins%0A        %0A    def cont_segs(self, segs: int):%0A        if segs %3C 0 or segs %3E 59:%0A            print(%22fail: segundo invalido%22)%0A            self.__segs = 0%0A            return%0A        self.__segs = segs%0A%0A%0A%0A%0A%0A\n     \n@@ -1835,19 +1835,18 @@\n relogio.\n-con\n+se\n t_hora(i\n@@ -1888,19 +1888,18 @@\n relogio.\n-con\n+se\n t_mins(i\n@@ -1941,19 +1941,18 @@\n relogio.\n-con\n+se\n t_segs(i\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-10-17_02-15-51",
+            "content": "class Relogio:\n    def __init__(self):\n        self.__hora = 0\n        self.__mins = 0\n        self.__segs = 0\n    \n    def get_hora(self):\n        return self.__hora\n    def get_mins(self):\n        return self.__mins\n    def get_segs(self):\n        return self.__segs\n\n    def __str__(self) -> str:\n        return f\"{self.get_hora():02}:{self.get_mins():02}:{self.get_segs():02}\"\n    \n    def set_hora(self, hora: int):\n        if hora < 0 or hora > 23:\n            print(\"fail: hora invalida\")\n            \n            return\n        self.__hora = hora\n\n    def set_mins(self, mins: int):\n        if mins < 0 or mins > 59:\n            print(\"fail: minuto invalido\")\n            return\n        self.__mins = mins\n    \n    def set_segs(self, segs: int):\n        if segs < 0 or segs > 59:\n            print(\"fail: segundo invalido\")\n            return\n        self.__segs = segs\n\n    def cont_hora(self, hora: int):\n        if hora < 0 or hora > 23:\n            print(\"fail: hora invalida\")     \n            self.__hora = 0   \n            return\n        self.__hora = hora\n\n    def cont_mins(self, mins: int):\n        if mins < 0 or mins > 59:\n            print(\"fail: minuto invalido\")\n            self.__mins = 0\n            return\n        self.__mins = mins\n        \n    def cont_segs(self, segs: int):\n        if segs < 0 or segs > 59:\n            print(\"fail: segundo invalido\")\n            self.__segs = 0\n            return\n        self.__segs = segs\n\n\n\n\n\n    def NextSecond(self):\n        if self.get_segs() == 59:\n            self.set_segs(0)\n            if self.get_mins() == 59:\n                self.set_mins(0)\n                if self.get_hora() == 23:\n                    self.set_hora(0)\n                else:\n                    self.set_hora(self.get_hora() + 1)\n            else:\n                self.set_mins(self.get_mins() + 1)\n        else:\n            self.set_segs(self.get_segs() + 1)\n        \ndef main():\n    relogio: Relogio = Relogio()\n    while True:\n        line: str = input()\n        print(\"$\"+ line)\n        args: list[str] = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        if args[0] == \"show\":\n            print(relogio)\n        if args[0] == \"set\":\n            args[1] = relogio.set_hora(int(args[1]))\n            args[2] = relogio.set_mins(int(args[2]))\n            args[3] = relogio.set_segs(int(args[3]))\n        if args[0] == \"init\":\n            args[1] = relogio.cont_hora(int(args[1]))\n            args[2] = relogio.cont_mins(int(args[2]))\n            args[3] = relogio.cont_segs(int(args[3]))\n        if args[0] == \"next\":\n            relogio.NextSecond()\n    \nmain()",
+            "lines": "96"
+        }
+    ]
+}
