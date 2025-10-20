@@ -1,0 +1,10 @@
+2025-10-20 00:02:49, MOVE, v:1, k:poo@notebook, mode:DOWN
+2025-10-20 00:03:49, MOVE, v:1, k:poo@notebook, mode:PICK
+2025-10-20 00:10:48, EXEC, v:1, k:poo@notebook, mode:FREE, size:9
+2025-10-20 02:11:32, MOVE, v:1, k:poo@notebook, mode:PICK
+2025-10-20 02:11:33, EXEC, v:1, k:poo@notebook, mode:FREE, size:77
+2025-10-20 02:11:47, MOVE, v:1, k:poo@notebook, mode:PICK
+2025-10-20 02:11:55, EXEC, v:1, k:poo@notebook, mode:FREE, size:77
+2025-10-20 02:15:20, MOVE, v:1, k:poo@notebook, mode:PICK
+2025-10-20 02:15:25, EXEC, v:1, k:poo@notebook, mode:FREE, size:77
+2025-10-20 02:20:10, MOVE, v:1, k:poo@notebook, mode:BACK

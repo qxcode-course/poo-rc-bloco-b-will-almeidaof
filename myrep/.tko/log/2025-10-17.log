@@ -32,3 +32,5 @@
 2025-10-17 18:29:32, MOVE, v:1, k:poo@relogio, mode:PICK
 2025-10-17 18:29:33, EXEC, v:1, k:poo@relogio, mode:FULL, rate:100, size:91
 2025-10-17 18:33:45, MOVE, v:1, k:poo@relogio, mode:BACK
+2025-10-17 19:26:37, MOVE, v:1, k:poo@relogio, mode:PICK
+2025-10-17 19:26:39, EXEC, v:1, k:poo@relogio, mode:FREE
