@@ -38,14 +38,14 @@ class Notebook:
     def mostrar(self):
         if self.get_bateria == None:
             print (f"status: desligado, bateria: (nenhuma)")
-        """
+            return
         if self.get_ligado() == False:
             print (f"status: desligado, bateria: ({bateria.get_carga()}/{bateria.get_capacidade()})")
             return
         if self.get_ligado() == True:
             print (f"status: ligado, bateria: ({bateria.get_carga()}/{bateria.get_capacidade()})")
             return
-        """
+        
     def ligar(self):
         if self.get_ligado() == True:
             print("notebook já está ligado")
@@ -78,4 +78,4 @@ class Notebook:
 notebook = Notebook()
 bateria = Bateria(50)
 notebook.mostrar()
-print(notebook.get_bateria())
+
