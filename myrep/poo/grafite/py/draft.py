@@ -23,7 +23,7 @@ class Lead:
     def get_hardness(self):
         return self.__hardness
     def set_size(self, tamanho: int):
-        self.__size += tamanho
+        self.__size = tamanho
     def get_size(self):
         return self.__size
 
@@ -68,12 +68,18 @@ class Pencil:
 
         size = self.__tip.get_size()
         cost = self.__tip.usagePerSheet()
+        resultado = size - cost
 
         if size <= 10:
             print("fail: tamanho insuficiente")
             return
+        
+        if resultado <10:
+            print("fail: folha incompleta")
+            self.__tip.set_size(10)
+            return
 
-        self.__tip.set_size(size - cost)
+        self.__tip.set_size(resultado)
 
 
 
